@@ -1,4 +1,4 @@
-const readline = require('readline');
+const online = require('readline');
 
 const Quiz = [
     {
@@ -7,9 +7,9 @@ const Quiz = [
         correctAnswer: "Paris"
     },
     {
-        question: "Which planet is known as the Red Planet?",
-        options: ["Earth", "Mars", "Venus", "Jupiter"],
-        correctAnswer: "Mars"
+        question:'what is variable?',
+        options:['hello','sylvie','storage location in computer memory where you can store and retrive data'],
+        answer:3
     },
     {
         question: "Who wrote 'Romeo and Juliet'?",
@@ -54,14 +54,14 @@ async function runQuizGame() {
 }
 
 function askQuestion(question) {
-    const rl = readline.createInterface({
+    const final = online.createInterface({
         input: process.stdin,
         output: process.stdout
     });
 
     return new Promise(resolve => {
-        rl.question(question, answer => {
-            rl.close();
+        final.question(question, answer => {
+            final.close();
             resolve(answer);
         });
     });
