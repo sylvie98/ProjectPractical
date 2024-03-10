@@ -15,6 +15,7 @@ function addBook(title, author) {
 addBook("system analysis and design","rubasha chrales");
 addBook("fundamental programing language","nsabiyumva jmv");
 addBook("fundamental algrothim"," uwiduhaye esther");
+addBook('javascript fundamentay','shimirwa bernarad');
 //dispalyed  book avaible in libray
 function displayAvailableBooks() {
     console.log("Available Books:");
