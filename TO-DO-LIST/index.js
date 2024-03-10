@@ -23,14 +23,14 @@ function taskandcategory() {
     for (const category in TASK) {
         console.log(`Category: ${category}`);
         TASK[category].forEach(task => 
-        console.log(`${task.description} (${task.completed ? 'Completed' : 'Pending'}`));
+        console.log(`${task.description} (${task.completed ? 'Completed' : 'NOT YET'}`));
         };
     
 }
 
 
 function markCompleted(description) {
-    const task = TO.find(task => task.description === description);
+    const task = TODOLIST.find(task => task.description === description);
     if (task) {
         task.completed = true;
         console.log(`Task ${description} marked as completed.`);
@@ -38,12 +38,11 @@ function markCompleted(description) {
         console.log(`Task ${description} not found.`);
     }
 }
-/*
 //REMOVED ANY TASK IN LIST
 function removeTask(description) {
-    const index = todoList.findIndex(task => task.description === description);
+    const index = TODOLIST.findIndex(task => task.description === description);
     if (index !== -1) {
-        todoList.splice(index, 1);
+        TODOLIST.splice(index, 1);
         console.log(`Task ${description} removed.`);
     } else {
         console.log(`Task ${description} not found.`);
@@ -51,5 +50,5 @@ function removeTask(description) {
 }
 
 
-markTaskCompleted("Study for exam");
-removeTask("Walk out");*/
+markCompleted("Study for exam");
+removeTask("cooking");
