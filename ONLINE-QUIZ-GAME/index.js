@@ -1,6 +1,6 @@
 const readline = require('readline');
 
-const quiz = [
+const Quiz = [
     {
         question: "What is the capital of France?",
         options: ["Paris", "London", "Berlin", "Rome"],
@@ -19,8 +19,8 @@ const quiz = [
 ];
 
 function displayRandomQuestion() {
-    const randomIndex = Math.floor(Math.random() * quiz.length);
-    const question = quiz[randomIndex];
+    const randomIndex = Math.floor(Math.random() * Quiz.length);
+    const question = Quiz[randomIndex];
     console.log(question.question);
     question.options.forEach((option, index) => {
         console.log(`${index + 1}. ${option}`);
@@ -34,9 +34,9 @@ function checkAnswer(question, userAnswer) {
 
 async function runQuizGame() {
     let correctAnswers = 0;
-    let totalQuestions = quiz.length;
+    let totalQuestions = Quiz.length;
 
-    console.log("Welcome to the Quiz Game!");
+    console.log("WELCAME IN THE ONLINE Quiz Game!");
 
     for (let i = 0; i < totalQuestions; i++) {
         const randomQuestion = displayRandomQuestion();
