@@ -36,9 +36,9 @@ function markTaskCompleted(description) {
     const task = todoList.find(task => task.description === description);
     if (task) {
         task.completed = true;
-        console.log(Task "${description}" marked as completed.);
+        console.log(`Task ${description} marked as completed.`);
     } else {
-        console.log(Task "${description}" not found.);
+        console.log(`Task ${description} not found.`);
     }
 }
 
@@ -46,9 +46,9 @@ function removeTask(description) {
     const index = todoList.findIndex(task => task.description === description);
     if (index !== -1) {
         todoList.splice(index, 1);
-        console.log(Task "${description}" removed.);
+        console.log(`Task ${description} removed.`);
     } else {
-        console.log(Task "${description}" not found.);
+        console.log(`Task ${description} not found.`);
     }
 }
 
